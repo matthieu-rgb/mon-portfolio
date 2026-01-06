@@ -1,31 +1,180 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>from-mechanic-to-hacker.com</title>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Matthieu - Pentester en reconversion professionnelle. Découvrez mes projets, compétences et parcours en cybersécurité.">
+    <meta name="keywords" content="pentester, cybersécurité, sécurité informatique, ethical hacking, CTF">
+    <title>Matthieu | Pentester en devenir</title>
 
-    </head>
-    <body>
-        <h1>From Mechanic to Hacker.com</h1>
-        <h2>Mon parcours de reconversion professionnel</h2>
-        <h3>A propos</h3>
-        <p>Étudiant en Cybersécurité | Reconversion de l'Automobile vers la Sécurité Offensive
-En reconversion professionnelle après 20 ans d'expérience en électricité automobile. Actuellement en formation intensive en cybersécurité chez Jedha, où je développe mes compétences pratiques en sécurité des applications web, tests d'intrusion, conteneurisation Docker et sécurité des infrastructures. Ce GitHub documente mon parcours de formation à travers des labs pratiques (exploitation JWT, attaques CSRF, détournement de sessions), des challenges CTF et des projets techniques. La certification CPTS est mon objectif à moyen terme. Suivez ma progression via mes articles techniques sur Medium, mes réalisations HTB/THM et mes projets développés durant la formation.</p>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<h3>Focus actuel</h3>
-<ul>
-    <li>Sécurité des applications web</li>
-    <li>Docker et conteneurisation</li>
-    <li>Tests d'intrusion</li>
-    <li>CI/CD et automatisation</li>
-</ul>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">&lt;/Matthieu&gt;</a>
 
-<h3>Liens</h3>
-    <ul>
-        <li><a href="https://medium.com/@broquard.matthieu"</a>Medium</li>
-        <li><a href="https://github.com/matthieu-rgb"</a>GitHub</li>
-        <li><a href="https://app.hackthebox.com/users/2763619"</a>Hack the box</li>
-         <li><a href="https://tryhackme.com/p/broquard.matthieu"</a>Try hack me</li>
-    </ul>
-    </body>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="social-links">
+                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+                <a href="#" target="_blank" title="TryHackMe"><i class="fas fa-flag"></i></a>
+                <a href="#" target="_blank" title="HackTheBox"><i class="fas fa-cube"></i></a>
+            </div>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Particules en arrière-plan -->
+    <canvas id="particles-canvas" data-color-primary="#06b6d4" data-color-secondary="#a855f7"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Matthieu</h1>
+            <p class="hero-subtitle">
+                <span class="typing-text" data-words='["Pentester en devenir", "Passionné de cybersécurité", "CTF Player", "Security Enthusiast"]'></span>
+            </p>
+            <p class="hero-description">
+                En reconversion professionnelle vers la cybersécurité offensive.
+                Passionné par les tests d'intrusion, les CTF et la recherche de vulnérabilités.
+            </p>
+            <div class="cta-buttons">
+                <a href="projets.html" class="btn btn-primary">
+                    <i class="fas fa-folder-open"></i>
+                    Voir mes projets
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Me contacter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À propos</h2>
+                <p class="section-description">Mon parcours vers la cybersécurité</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <!-- Placeholder pour une image/avatar -->
+                    <div style="width: 100%; height: 400px; background: var(--bg-card); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--border-color);">
+                        <i class="fas fa-user-secret" style="font-size: 8rem; color: var(--accent-cyan); opacity: 0.5;"></i>
+                    </div>
+                </div>
+
+                <div class="about-text fade-in">
+                    <h3>Qui suis-je ?</h3>
+                    <p>
+                        <!-- PLACEHOLDER : Remplacez ce texte par votre présentation personnelle -->
+                        Actuellement en reconversion professionnelle, je me forme intensivement
+                        aux métiers de la cybersécurité avec une spécialisation en tests d'intrusion (pentest).
+                    </p>
+                    <p>
+                        <!-- PLACEHOLDER : Ajoutez votre parcours précédent et votre motivation -->
+                        Après 20 ans dans la production automobile et dans la recherche de defauts electroniques 
+                        , j'ai décidé de suivre ma passion pour
+                        la sécurité informatique. Cette reconversion représente pour moi l'opportunité
+                        de combiner curiosité technique et résolution de problèmes complexes.
+                    </p>
+                    <p>
+                        <!-- PLACEHOLDER : Mentionnez vos formations/certifications en cours -->
+                        Je me forme actuellement via une formation en cybersécur Jedha  et je pratique
+                        régulièrement sur des plateformes comme TryHackMe et HackTheBox pour
+                        développer mes compétences pratiques.
+                    </p>
+
+                    <div class="cta-buttons" style="justify-content: flex-start; margin-top: 2rem;">
+                        <a href="cv.html" class="btn btn-primary">
+                            <i class="fas fa-file-alt"></i>
+                            Voir mon CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aperçu rapide des compétences -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Domaines d'expertise</h2>
+                <p class="section-description">Les domaines dans lesquels je me forme</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-shield-alt"></i> Pentest & Red Team</h3>
+                    <p style="color: var(--text-secondary);">
+                        Tests d'intrusion, reconnaissance, exploitation de vulnérabilités,
+                        élévation de privilèges et post-exploitation.
+                    </p>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-network-wired"></i> Réseau & Systèmes</h3>
+                    <p style="color: var(--text-secondary);">
+                        Administration Linux/Windows, analyse de trafic réseau,
+                        protocoles et architectures sécurisées.
+                    </p>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i> Scripting & Automatisation</h3>
+                    <p style="color: var(--text-secondary);">
+                        Python, Bash, développement d'outils de sécurité
+                        et automatisation des tâches de pentest.
+                    </p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="competences.html" class="btn btn-secondary">
+                    Voir toutes mes compétences
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Matthieu. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
 </html>
