@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mes projets en cybersécurité - Outils, scripts et write-ups de CTF.">
+    <title>Projets | Matthieu - Pentester</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">&lt;/Matthieu&gt;</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="social-links">
+                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+                <a href="#" target="_blank" title="TryHackMe"><i class="fas fa-flag"></i></a>
+                <a href="#" target="_blank" title="HackTheBox"><i class="fas fa-cube"></i></a>
+            </div>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Particules en arrière-plan -->
+    <canvas id="particles-canvas" data-color-primary="#a855f7" data-color-secondary="#9333ea"></canvas>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Projets</h1>
+                <p class="section-description">
+                    Outils, scripts et projets développés dans le cadre de ma formation en cybersécurité
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projet 1 - PLACEHOLDER -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Scanner de vulnérabilités</h3>
+                        <p>
+                            <!-- PLACEHOLDER : Remplacez par la description de votre projet -->
+                            Script Python automatisant la reconnaissance et la détection de vulnérabilités
+                            communes sur des cibles web.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Nmap</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Code source
+                            </a>
+                            <a href="#">
+                                <i class="fas fa-external-link-alt"></i>
+                                Démo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - PLACEHOLDER -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Password Cracker</h3>
+                        <p>
+                            <!-- PLACEHOLDER : Remplacez par la description de votre projet -->
+                            Outil de test de robustesse des mots de passe utilisant différentes
+                            techniques (dictionnaire, brute force, règles).
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Hashcat</span>
+                            <span class="project-tag">Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Code source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - PLACEHOLDER -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-spider"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Web Crawler OSINT</h3>
+                        <p>
+                            <!-- PLACEHOLDER : Remplacez par la description de votre projet -->
+                            Outil de collecte d'informations automatisé pour la phase de
+                            reconnaissance lors d'un pentest.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">OSINT</span>
+                            <span class="project-tag">BeautifulSoup</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Code source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - Write-ups CTF -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Write-ups CTF</h3>
+                        <p>
+                            Collection de mes write-ups pour les challenges TryHackMe et
+                            HackTheBox. Documentation détaillée de ma méthodologie.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">CTF</span>
+                            <span class="project-tag">TryHackMe</span>
+                            <span class="project-tag">HackTheBox</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Repository
+                            </a>
+                            <a href="articles.html">
+                                <i class="fas fa-book"></i>
+                                Articles
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - PLACEHOLDER -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Monitor</h3>
+                        <p>
+                            <!-- PLACEHOLDER : Remplacez par la description de votre projet -->
+                            Script de surveillance réseau détectant les anomalies et
+                            les comportements suspects sur un réseau local.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scapy</span>
+                            <span class="project-tag">Network</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Code source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - Lab Personnel -->
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Home Lab Setup</h3>
+                        <p>
+                            Documentation de mon environnement de lab personnel pour
+                            pratiquer le pentest en toute légalité (VMs vulnérables, AD, etc.).
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">VirtualBox</span>
+                            <span class="project-tag">Active Directory</span>
+                            <span class="project-tag">Lab</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lien GitHub global -->
+            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 1rem;">
+                    <i class="fab fa-github" style="margin-right: 0.5rem;"></i>
+                    Voir tous mes projets sur GitHub
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                    Retrouvez l'ensemble de mes repositories et contributions
+                </p>
+                <a href="#" target="_blank" class="btn btn-primary">
+                    <!-- PLACEHOLDER : Remplacez # par votre URL GitHub -->
+                    <i class="fab fa-github"></i>
+                    Mon GitHub
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Matthieu. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
