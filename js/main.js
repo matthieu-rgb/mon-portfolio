@@ -473,33 +473,8 @@ function initSmoothScroll() {
 // FORMULAIRE DE CONTACT
 // ========================================
 function initContactForm() {
-    const form = document.querySelector('.contact-form');
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Récupération des données
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-
-        // Ici vous pouvez ajouter l'envoi vers un service
-        // comme Formspree, Netlify Forms, ou votre propre backend
-
-        // Message de confirmation temporaire
-        const btn = form.querySelector('button[type="submit"]');
-        const originalText = btn.textContent;
-        btn.textContent = 'Message envoyé !';
-        btn.style.background = '#10b981';
-
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.style.background = '';
-            form.reset();
-        }, 3000);
-
-        console.log('Form data:', data);
-    });
+    // Désactivé pour laisser Formspree gérer le formulaire
+    return;
 }
 
 // ========================================
