@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mon parcours professionnel - CV interactif et timeline de ma reconversion en cybersécurité.">
+    <title>CV | Matthieu - Pentester</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Styles spécifiques au CV */
+        .cv-header {
+            text-align: center;
+            padding: 3rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 4rem;
+        }
+
+        .cv-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--accent-cyan);
+        }
+
+        .cv-avatar i {
+            font-size: 4rem;
+            color: var(--accent-cyan);
+        }
+
+        .cv-name {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-title {
+            color: var(--accent-cyan);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .cv-contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+        }
+
+        .cv-contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cv-section {
+            margin-bottom: 4rem;
+        }
+
+        .cv-section-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .cv-section-title i {
+            color: var(--accent-cyan);
+            font-size: 1.5rem;
+        }
+
+        .cv-section-title h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Stats rapides */
+        .cv-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .stat-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-3px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Download button */
+        .cv-download {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">&lt;/Matthieu&gt;</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="cv.html" class="active">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="social-links">
+                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+                <a href="#" target="_blank" title="TryHackMe"><i class="fas fa-flag"></i></a>
+                <a href="#" target="_blank" title="HackTheBox"><i class="fas fa-cube"></i></a>
+            </div>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Particules en arrière-plan -->
+    <canvas id="particles-canvas" data-color-primary="#a855f7" data-color-secondary="#06b6d4"></canvas>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <div class="container">
+            <!-- En-tête CV -->
+            <div class="cv-header fade-in">
+                <div class="cv-avatar">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h1 class="cv-name">Matthieu</h1>
+                <p class="cv-title">Pentester en reconversion</p>
+                <div class="cv-contact-info">
+                    <span><i class="fas fa-map-marker-alt"></i> France</span>
+                    <span><i class="fas fa-envelope"></i> votre@email.com</span>
+                    <span><i class="fab fa-linkedin"></i> LinkedIn</span>
+                </div>
+            </div>
+
+            <!-- Stats rapides -->
+            <div class="cv-stats">
+                <div class="stat-card fade-in">
+                    <div class="stat-number">XX+</div>
+                    <div class="stat-label">Machines compromises (CTF)</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number">XX</div>
+                    <div class="stat-label">Projets GitHub</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number">XX</div>
+                    <div class="stat-label">Articles publiés</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number">En cours</div>
+                    <div class="stat-label">Formation pentest</div>
+                </div>
+            </div>
+
+            <!-- Profil -->
+            <section class="cv-section fade-in">
+                <div class="cv-section-title">
+                    <i class="fas fa-user"></i>
+                    <h2>Profil</h2>
+                </div>
+                <div style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        <!-- PLACEHOLDER : Votre pitch professionnel -->
+                        Passionné par la cybersécurité et actuellement en reconversion professionnelle,
+                        je me forme intensivement aux techniques de tests d'intrusion. Curieux et
+                        méthodique, je développe mes compétences à travers des CTF, des projets
+                        personnels et une veille technologique constante. Mon objectif : devenir
+                        pentester et contribuer à sécuriser les systèmes d'information.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Formation -->
+            <section class="cv-section fade-in">
+                <div class="cv-section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>Formation</h2>
+                </div>
+                <div class="timeline">
+                    <!-- Formation actuelle -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 - Présent</span>
+                            <h3>Formation Pentester</h3>
+                            <p class="timeline-company">
+                                <!-- PLACEHOLDER : Nom de votre formation -->
+                                [Nom de l'organisme de formation]
+                            </p>
+                            <p>
+                                <!-- PLACEHOLDER : Description de la formation -->
+                                Formation intensive aux techniques de tests d'intrusion,
+                                sécurité offensive et méthodologies de pentest.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Formation précédente -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">XXXX - XXXX</span>
+                            <h3>Diplôme précédent</h3>
+                            <p class="timeline-company">
+                                <!-- PLACEHOLDER : Établissement -->
+                                [Nom de l'établissement]
+                            </p>
+                            <p>
+                                <!-- PLACEHOLDER : Description -->
+                                [Description de votre formation précédente]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Autoformation -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Continu</span>
+                            <h3>Autoformation & CTF</h3>
+                            <p class="timeline-company">TryHackMe, HackTheBox, PortSwigger Academy</p>
+                            <p>
+                                Pratique régulière sur des plateformes de CTF et labs virtuels
+                                pour développer des compétences pratiques en pentest.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expérience professionnelle -->
+            <section class="cv-section fade-in">
+                <div class="cv-section-title">
+                    <i class="fas fa-briefcase"></i>
+                    <h2>Expérience professionnelle</h2>
+                </div>
+                <div class="timeline">
+                    <!-- Expérience précédente 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">XXXX - 2024</span>
+                            <h3>Poste précédent</h3>
+                            <p class="timeline-company">
+                                <!-- PLACEHOLDER : Nom de l'entreprise -->
+                                [Nom de l'entreprise]
+                            </p>
+                            <p>
+                                <!-- PLACEHOLDER : Description du poste -->
+                                [Description de vos responsabilités et réalisations.
+                                Mettez en avant les compétences transférables vers la cybersécurité]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Expérience précédente 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">XXXX - XXXX</span>
+                            <h3>Autre poste</h3>
+                            <p class="timeline-company">
+                                <!-- PLACEHOLDER : Nom de l'entreprise -->
+                                [Nom de l'entreprise]
+                            </p>
+                            <p>
+                                <!-- PLACEHOLDER : Description -->
+                                [Description de vos responsabilités]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="cv-section fade-in">
+                <div class="cv-section-title">
+                    <i class="fas fa-certificate"></i>
+                    <h2>Certifications</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <!-- Certification en préparation -->
+                    <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); border-left: 4px solid var(--accent-cyan);">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0;">Certification visée</h4>
+                            <span style="background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">En préparation</span>
+                        </div>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">
+                            <!-- PLACEHOLDER : Nom et détails de la certification -->
+                            [Ex: OSCP, CEH, eJPT, CompTIA Security+...]
+                        </p>
+                    </div>
+
+                    <!-- Autre certification -->
+                    <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); border-left: 4px solid var(--accent-green);">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0;">Certification obtenue</h4>
+                            <span style="background: rgba(16, 185, 129, 0.2); color: var(--accent-green); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">Obtenue</span>
+                        </div>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">
+                            <!-- PLACEHOLDER : Certification obtenue si applicable -->
+                            [Certification - Date d'obtention]
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compétences clés -->
+            <section class="cv-section fade-in">
+                <div class="cv-section-title">
+                    <i class="fas fa-cogs"></i>
+                    <h2>Compétences clés</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <div style="background: var(--bg-card); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <strong style="color: var(--accent-cyan);">Pentest</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Reconnaissance, exploitation, post-exploitation</p>
+                    </div>
+                    <div style="background: var(--bg-card); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <strong style="color: var(--accent-cyan);">Réseaux</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">TCP/IP, analyse de trafic, protocoles</p>
+                    </div>
+                    <div style="background: var(--bg-card); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <strong style="color: var(--accent-cyan);">Systèmes</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Linux, Windows, virtualisation</p>
+                    </div>
+                    <div style="background: var(--bg-card); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <strong style="color: var(--accent-cyan);">Scripting</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Python, Bash, automatisation</p>
+                    </div>
+                    <div style="background: var(--bg-card); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <strong style="color: var(--accent-cyan);">Web Security</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">OWASP, XSS, SQLi, Burp Suite</p>
+                    </div>
+                    <div style="background: var(--bg-card); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <strong style="color: var(--accent-cyan);">Outils</strong>
+                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">Nmap, Metasploit, Wireshark</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Langues -->
+            <section class="cv-section fade-in">
+                <div class="cv-section-title">
+                    <i class="fas fa-language"></i>
+                    <h2>Langues</h2>
+                </div>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <div>
+                        <strong>Français</strong>
+                        <span style="color: var(--text-secondary);"> - Natif</span>
+                    </div>
+                    <div>
+                        <strong>Anglais</strong>
+                        <span style="color: var(--text-secondary);"> - [Votre niveau]</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Téléchargement CV -->
+            <div class="cv-download">
+                <a href="#" class="btn btn-primary">
+                    <!-- PLACEHOLDER : Lien vers votre CV PDF -->
+                    <i class="fas fa-download"></i>
+                    Télécharger le CV (PDF)
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Me contacter
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Matthieu. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
