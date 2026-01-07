@@ -34,8 +34,36 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: "trivy-results.sarif"
+  lint-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Run HTMLHint
+        run: htmlhint "*.html"
+
+  lint-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install flake8
+        run: pip install flake8
+
+      - name: Run flake8
+        run: flake8 . --max-line-length=120 --ignore=E501
   deploy:
-    needs: security-scan
+    needs: [security-scan, lint-html, lint-python]
     environment:
         name: github-pages
         url: ${{ steps.deployment.outputs.page_url }}
