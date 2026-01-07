@@ -1,5 +1,5 @@
-name: Deploy static content to Pages
-
+name: Deploy and Security Scan
+    
 on:
   push:
     branches: [main]
@@ -9,13 +9,29 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  security-events: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: "fs"
+          scan-ref: "."
+          format: "table"
+          severity: "CRITICAL,HIGH,MEDIUM"
+
   deploy:
+    needs: security-scan
     environment:
         name: github-pages
         url: ${{ steps.deployment.outputs.page_url }}
