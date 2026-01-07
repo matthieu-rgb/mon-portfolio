@@ -27,7 +27,8 @@ jobs:
         with:
           scan-type: "fs"
           scan-ref: "."
-          format: "table"
+          format: "sarif"
+          output: "trivy-results.sarif"
           severity: "CRITICAL,HIGH,MEDIUM"
 
   deploy:
