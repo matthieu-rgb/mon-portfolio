@@ -1,0 +1,22 @@
+{
+  "articles": [
+    {
+      "slug": "bienvenue-sur-0xmatthieu-dev",
+      "title": "Bienvenue sur 0xmatthieu.dev",
+      "date": "2026-04-28T07:00:00+02:00",
+      "date_human": "28 avril 2026",
+      "summary": "Lancement du blog cyber de Matthieu Broquard : veille, analyses techniques, retours d'experience AIS et pentest automotive, le tout alimenté par un pipeline agentique avec validation humaine.",
+      "lead": "Premier article du blog. Quelques mots sur ce qu'on va y publier, comment c'est construit, et pourquoi on automatise une partie de la chaine editoriale.",
+      "tags": [
+        "meta",
+        "cybersecurite",
+        "automation"
+      ],
+      "primary_source": "0xmatthieu.dev",
+      "url": "articles/bienvenue-sur-0xmatthieu-dev.html",
+      "reading_time": 3
+    }
+  ],
+  "count": 1,
+  "updated": "2026-04-28T14:17:59.987160+00:00"
+}

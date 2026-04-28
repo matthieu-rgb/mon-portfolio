@@ -1,0 +1,466 @@
+/* ============================================================
+   ARTICLES-LIST.CSS - Editorial Pivot light
+   Hero featured magazine + grid de cards.
+   Doit etre charge APRES article.css (qui apporte les overrides
+   body/header en palette light).
+   ============================================================ */
+
+/* Section header de page (titre + description + RSS) */
+.articles-page-header {
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+    padding: 6rem 2rem 0;
+    text-align: center;
+}
+
+.articles-page-header .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent-warm);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.articles-page-header .eyebrow::before,
+.articles-page-header .eyebrow::after {
+    content: "";
+    width: 36px;
+    height: 1px;
+    background: var(--rule-warm);
+}
+
+.articles-page-header h1 {
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 96, "SOFT" 50;
+    font-weight: 500;
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+}
+
+.articles-page-header p {
+    font-family: var(--sans);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin: 0 auto 1.5rem;
+}
+
+.articles-page-header .rss-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--rule-warm);
+    border-radius: 3px;
+    color: var(--accent-warm);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    transition: all var(--t);
+    background: transparent;
+}
+
+.articles-page-header .rss-link:hover {
+    background: var(--accent-warm-soft);
+    border-color: var(--accent-warm);
+}
+
+/* ============================================================
+   FILTRE PAR TAG
+   ============================================================ */
+.article-tags-filter {
+    max-width: 1100px;
+    margin: 0 auto 3.5rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-tag-chip {
+    padding: 0.4rem 1rem;
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: all var(--t);
+}
+
+.article-tag-chip:hover {
+    border-color: var(--accent-warm);
+    color: var(--accent-warm);
+}
+
+.article-tag-chip.active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
+}
+
+/* ============================================================
+   CONTAINER PRINCIPAL
+   ============================================================ */
+.articles-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.article-list-empty {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--ink-muted);
+    font-family: var(--sans);
+    font-style: italic;
+    border: 1px dashed var(--rule);
+    border-radius: 6px;
+    background: var(--paper-warm);
+}
+
+/* ============================================================
+   HERO FEATURED (premier article en grand)
+   ============================================================ */
+.article-card.featured {
+    display: block;
+    padding: 3rem 0;
+    margin-bottom: 4rem;
+    border-top: 1px solid var(--rule-warm);
+    border-bottom: 1px solid var(--rule-warm);
+    background: transparent;
+    border-radius: 0;
+    text-decoration: none;
+    transition: opacity var(--t);
+}
+
+.article-card.featured:hover { opacity: 0.85; }
+
+.article-card.featured .featured-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-warm);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.article-card.featured .featured-eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--rule-warm);
+}
+
+.article-card.featured .article-card-source {
+    color: var(--ink-muted);
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+}
+
+.article-card.featured .article-card-title {
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 80, "SOFT" 50;
+    font-weight: 500;
+    font-size: clamp(2rem, 4.6vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1rem;
+}
+
+.article-card.featured .article-card-lead {
+    font-family: var(--sans);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin-bottom: 1.5rem;
+}
+
+.article-card.featured .article-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-muted);
+    margin-bottom: 1.8rem;
+}
+
+.article-card.featured .article-card-meta > * {
+    padding-right: 1.2rem;
+    margin-right: 1.2rem;
+    border-right: 1px solid var(--rule);
+}
+
+.article-card.featured .article-card-meta > *:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.article-card.featured .article-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.3rem;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 3px;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+    transition: all var(--t);
+    text-decoration: none;
+}
+
+.article-card.featured .article-card-link:hover {
+    background: var(--accent-warm);
+}
+
+/* ============================================================
+   GRID DE CARDS (articles non-featured)
+   ============================================================ */
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2.5rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 700px) {
+    .article-list { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+/* ============================================================
+   CARTE ARTICLE STANDARD
+   ============================================================ */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    border-top: 1px solid var(--rule);
+    border-radius: 0;
+    padding: 2rem 0 0;
+    transition: opacity var(--t);
+    text-decoration: none;
+}
+
+.article-card:hover { opacity: 0.85; }
+
+.article-card-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent-warm);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.article-card-source i { display: none; }
+
+.article-card-date {
+    display: none;
+}
+
+.article-card-title {
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 36, "SOFT" 50;
+    font-weight: 500;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0 0 0.8rem;
+}
+
+.article-card-lead {
+    font-family: var(--sans);
+    color: var(--ink-soft);
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.article-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-muted);
+    margin-bottom: 1rem;
+}
+
+.article-card-meta > * {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 1px solid var(--rule);
+}
+
+.article-card-meta > *:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.article-card-meta-item i {
+    color: var(--accent-warm);
+    font-size: 0.78rem;
+}
+
+.article-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-bottom: 1rem;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-muted);
+}
+
+.article-card-tag {
+    transition: color var(--t);
+}
+
+.article-card-tag:hover { color: var(--accent-warm); }
+
+.article-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-warm);
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-top: auto;
+    border: none;
+    text-decoration: none;
+    transition: gap var(--t);
+}
+
+.article-card-link:hover { gap: 0.8rem; }
+
+.article-card.external::after {
+    content: "EXT";
+    margin-left: 0.5rem;
+    font-size: 0.6rem;
+    padding: 0.1rem 0.4rem;
+    background: var(--accent-warm-soft);
+    color: var(--accent-warm);
+    border-radius: 2px;
+    font-family: var(--mono);
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+}
+
+/* ============================================================
+   SECTION MEDIUM (legacy)
+   ============================================================ */
+.medium-section {
+    max-width: 1100px;
+    margin: 5rem auto 4rem;
+    padding: 4rem 2rem 0;
+    border-top: 1px solid var(--rule-warm);
+}
+
+.medium-section-title {
+    text-align: center;
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 48;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.medium-section-subtitle {
+    text-align: center;
+    font-family: var(--sans);
+    font-style: italic;
+    color: var(--ink-muted);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.medium-section-title i {
+    color: var(--accent-warm);
+    margin-right: 0.5rem;
+}
+
+.medium-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.medium-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.8rem;
+    background: transparent;
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--t);
+}
+
+.medium-cta .btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+/* Override page-content du portfolio dark */
+.page-content {
+    padding-top: 0 !important;
+}

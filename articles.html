@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mes articles sur la cybersécurité - Write-ups, tutoriels et réflexions sur le pentest.">
+    <meta name="description" content="Articles cybersecurite de Matthieu Broquard : veille, analyses techniques, write-ups pentest et notes AIS.">
     <title>Articles | Matthieu - Pentester</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/articles-list.css">
+
+    <link rel="alternate" type="application/rss+xml" title="Articles Matthieu - Cybersecurite" href="articles/feed.xml">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <a href="index.html" class="logo">&lt;/Matthieu&gt;</a>
@@ -36,11 +31,11 @@
             </ul>
 
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/matthieu-broquard-727234156/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/matthieu-rgb" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://medium.com/@broquard.matthieu" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
-                <a href="https://tryhackme.com/p/broquard.matthieu" target="_blank" title="TryHackMe"><i class="fas fa-flag"></i></a>
-                <a href="https://app.hackthebox.com/users/2763619" target="_blank" title="HackTheBox"><i class="fas fa-cube"></i></a>
+                <a href="https://www.linkedin.com/in/matthieu-broquard-727234156/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/matthieu-rgb" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://medium.com/@broquard.matthieu" target="_blank" rel="noopener" title="Medium"><i class="fab fa-medium"></i></a>
+                <a href="https://tryhackme.com/p/broquard.matthieu" target="_blank" rel="noopener" title="TryHackMe"><i class="fas fa-flag"></i></a>
+                <a href="https://app.hackthebox.com/users/2763619" target="_blank" rel="noopener" title="HackTheBox"><i class="fas fa-cube"></i></a>
             </div>
 
             <div class="menu-toggle">
@@ -51,106 +46,62 @@
         </nav>
     </header>
 
-    <!-- Particules en arrière-plan -->
-    <canvas id="particles-canvas" data-color-primary="#06b6d4" data-color-secondary="#10b981"></canvas>
-
-    <!-- Page Content -->
     <main class="page-content">
-        <div class="container">
-            <div class="section-header">
-                <h1 class="section-title">Articles</h1>
-                <p class="section-description">
-                    Mes réflexions, tutoriels et write-ups sur la cybersécurité publiés sur Medium
-                </p>
+        <header class="articles-page-header">
+            <div class="eyebrow">Le journal</div>
+            <h1>Articles</h1>
+            <p>Veille cyber commentee, analyses techniques et notes du parcours AIS. Chaque article est passe par une validation humaine avant publication.</p>
+            <a href="articles/feed.xml" class="rss-link"><i class="fa-solid fa-rss"></i> RSS</a>
+        </header>
+
+        <div id="article-tags-filter" class="article-tags-filter" hidden>
+            <button type="button" class="article-tag-chip active" data-tag="">Tout</button>
+        </div>
+
+        <div class="articles-container">
+            <div id="article-list-blog" aria-live="polite">
+                <p class="article-list-empty">Chargement des articles...</p>
             </div>
+        </div>
 
-            <div class="articles-grid">
-                <!-- Article 1 -->
-                <article class="article-card fade-in">
-                    <span class="article-date">
-                        <i class="far fa-calendar-alt"></i>
-                        Décembre 2025
-                    </span>
-                    <h3>Comment j'ai hacké ma première machine Medium sur Hack The Box</h3>
-                    <p>
-                        Retour sur ma première box medium de Hack The Box - MonitorsFour : du type juggling PHP à l'évasion Docker.
-                    </p>
-                    <a href="https://medium.com/@broquard.matthieu/monitorsfour-hackthebox-write-up-du-type-juggling-php-%C3%A0-l%C3%A9vasion-docker-e0a22643368c" target="_blank" class="article-link">
-                        Lire sur Medium
-                        <i class="fas fa-arrow-right"></i>
+        <section class="medium-section">
+            <h2 class="medium-section-title"><i class="fab fa-medium"></i>Egalement sur Medium</h2>
+            <p class="medium-section-subtitle">Anciens write-ups et tutoriels publies sur Medium avant la creation du blog.</p>
+            <div class="article-list">
+                <article class="article-card external">
+                    <span class="article-card-source">Decembre 2025</span>
+                    <h3 class="article-card-title">Comment j'ai hacke ma premiere machine Medium sur Hack The Box</h3>
+                    <p class="article-card-lead">Retour sur ma premiere box medium de Hack The Box - MonitorsFour : du type juggling PHP a l'evasion Docker.</p>
+                    <a href="https://medium.com/@broquard.matthieu/monitorsfour-hackthebox-write-up-du-type-juggling-php-%C3%A0-l%C3%A9vasion-docker-e0a22643368c" target="_blank" rel="noopener" class="article-card-link">
+                        Lire sur Medium &rarr;
                     </a>
                 </article>
-
-                <!-- Article 2 -->
-                <article class="article-card fade-in">
-                    <span class="article-date">
-                        <i class="far fa-calendar-alt"></i>
-                        Décembre 2025
-                    </span>
-                    <h3>Write-up : OverPass</h3>
-                    <p>
-                        Walkthrough détaillé de mon aventure dans la machine Overpass sur TryHackMe.
-                    </p>
-                    <a href="https://medium.com/@broquard.matthieu/overpass-write-up-417411de2163" target="_blank" class="article-link">
-                        Lire sur Medium
-                        <i class="fas fa-arrow-right"></i>
+                <article class="article-card external">
+                    <span class="article-card-source">Decembre 2025</span>
+                    <h3 class="article-card-title">Write-up : OverPass</h3>
+                    <p class="article-card-lead">Walkthrough detaille de mon aventure dans la machine Overpass sur TryHackMe.</p>
+                    <a href="https://medium.com/@broquard.matthieu/overpass-write-up-417411de2163" target="_blank" rel="noopener" class="article-card-link">
+                        Lire sur Medium &rarr;
                     </a>
                 </article>
-
-                <!-- Article 3 -->
-                <article class="article-card fade-in">
-                    <span class="article-date">
-                        <i class="far fa-calendar-alt"></i>
-                        Janvier 2026
-                    </span>
-                    <h3>Déployer une Application Flask avec Docker, Nginx et HTTPS</h3>
-                    <p>
-                        Un guide pratique sur le déploiement d'applications Flask avec Docker, Nginx et certificats HTTPS.
-                    </p>
-                    <a href="https://medium.com/@broquard.matthieu/d%C3%A9ployer-une-application-flask-avec-docker-nginx-et-https-f90fe517d75e" target="_blank" class="article-link">
-                        Lire sur Medium
-                        <i class="fas fa-arrow-right"></i>
+                <article class="article-card external">
+                    <span class="article-card-source">Janvier 2026</span>
+                    <h3 class="article-card-title">Deployer une Application Flask avec Docker, Nginx et HTTPS</h3>
+                    <p class="article-card-lead">Un guide pratique sur le deploiement d'applications Flask avec Docker, Nginx et certificats HTTPS.</p>
+                    <a href="https://medium.com/@broquard.matthieu/d%C3%A9ployer-une-application-flask-avec-docker-nginx-et-https-f90fe517d75e" target="_blank" rel="noopener" class="article-card-link">
+                        Lire sur Medium &rarr;
                     </a>
                 </article>
-
-                
             </div>
-
-            <!-- Lien Medium global -->
-            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color);">
-                <h3 style="margin-bottom: 1rem;">
-                    <i class="fab fa-medium" style="margin-right: 0.5rem;"></i>
-                    Retrouvez tous mes articles sur Medium
-                </h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-                    Je publie régulièrement des articles sur mon parcours, des tutoriels et des write-ups
-                </p>
-                <a href="https://medium.com/@broquard.matthieu" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-medium"></i>
-                    Mon profil Medium
+            <div class="medium-cta">
+                <a href="https://medium.com/@broquard.matthieu" target="_blank" rel="noopener" class="btn">
+                    <i class="fab fa-medium"></i> Profil Medium complet
                 </a>
             </div>
-
-            <!-- Note pour les futurs articles -->
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(6, 182, 212, 0.1); border-radius: 8px; border-left: 3px solid var(--accent-cyan);">
-                <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem;">
-                    <i class="fas fa-info-circle" style="color: var(--accent-cyan); margin-right: 0.5rem;"></i>
-                    <strong style="color: var(--text-primary);">Note :</strong>
-                    Cette page sera mise à jour régulièrement avec mes nouveaux articles.
-                    N'hésitez pas à me suivre sur Medium pour ne rien manquer !
-                </p>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Matthieu Broquard. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/articles-list.js"></script>
 </body>
 </html>
