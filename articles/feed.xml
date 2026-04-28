@@ -9,7 +9,7 @@
         <copyright>Matthieu Broquard</copyright>
         <managingEditor>broquard.matthieu@gmail.com (Matthieu Broquard)</managingEditor>
         <webMaster>broquard.matthieu@gmail.com (Matthieu Broquard)</webMaster>
-        <lastBuildDate>Tue, 28 Apr 2026 14:17:59 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 28 Apr 2026 18:24:23 +0000</lastBuildDate>
         <generator>cyber-news-agent</generator>
         <ttl>360</ttl>
         
@@ -22,6 +22,22 @@
             <category>meta</category>
             <category>cybersecurite</category>
             <category>automation</category>
+            
+        </item>
+        
+        <item>
+            <title>CVE sur deux-roues electriques : firmware, RF et securite physique</title>
+            <link>https://0xmatthieu.dev/articles/cve-sur-deux-roues-electriques-firmware-rf-et-securite-physique.html</link>
+            <guid isPermaLink="true">https://0xmatthieu.dev/articles/cve-sur-deux-roues-electriques-firmware-rf-et-securite-physique.html</guid>
+            <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+            <description>Analyse des CVE-2025-1354 (Zero Motorcycles, Bluetooth firmware) et CVE-2025-70994 (Yadea T5, key fob replay). Impact pentest auto et NIS2.</description>
+            <category>pentest-auto</category>
+            <category>CVE</category>
+            <category>bluetooth</category>
+            <category>RF</category>
+            <category>firmware</category>
+            <category>deux-roues</category>
+            <category>NIS2</category>
             
         </item>
         

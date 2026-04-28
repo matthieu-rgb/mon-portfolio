@@ -15,8 +15,28 @@
       "primary_source": "0xmatthieu.dev",
       "url": "articles/bienvenue-sur-0xmatthieu-dev.html",
       "reading_time": 3
+    },
+    {
+      "slug": "cve-sur-deux-roues-electriques-firmware-rf-et-securite-physique",
+      "title": "CVE sur deux-roues electriques : firmware, RF et securite physique",
+      "date": "2026-04-28T00:00:00+00:00",
+      "date_human": "28 avril 2026",
+      "summary": "Analyse des CVE-2025-1354 (Zero Motorcycles, Bluetooth firmware) et CVE-2025-70994 (Yadea T5, key fob replay). Impact pentest auto et NIS2.",
+      "lead": "Zero Motorcycles et Yadea T5 exposes via Bluetooth et key fob. Deux attack surfaces differentes, une meme consequence : le rider en danger.",
+      "tags": [
+        "pentest-auto",
+        "CVE",
+        "bluetooth",
+        "RF",
+        "firmware",
+        "deux-roues",
+        "NIS2"
+      ],
+      "primary_source": "SecurityWeek",
+      "url": "articles/cve-sur-deux-roues-electriques-firmware-rf-et-securite-physique.html",
+      "reading_time": 5
     }
   ],
-  "count": 1,
-  "updated": "2026-04-28T14:17:59.987160+00:00"
+  "count": 2,
+  "updated": "2026-04-28T18:24:23.355807+00:00"
 }
