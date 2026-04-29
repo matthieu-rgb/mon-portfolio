@@ -8,8 +8,8 @@
 /* Section header de page (titre + description + RSS) */
 .articles-page-header {
     max-width: 1100px;
-    margin: 0 auto 2.5rem;
-    padding: 5rem 2rem 0;
+    margin: 0 auto 5rem;
+    padding: 7rem 2rem 0;
     text-align: center;
 }
 
