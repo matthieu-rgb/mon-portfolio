@@ -166,6 +166,14 @@ body canvas#particles-canvas {
    ARTICLE HERO - centre, signature editoriale magazine
    ============================================================ */
 .article-hero {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    z-index: auto;
     margin-bottom: 2.5rem;
     text-align: center;
 }
