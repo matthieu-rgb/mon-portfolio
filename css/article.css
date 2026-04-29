@@ -49,9 +49,20 @@ body header {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(254, 253, 251, 0.9);
+    background: rgba(254, 253, 251, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--rule);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+body header.header-hidden {
+    transform: translateY(-100%);
+}
+
+body header.scrolled {
+    box-shadow: 0 4px 20px rgba(28, 25, 23, 0.06);
 }
 
 body header nav {

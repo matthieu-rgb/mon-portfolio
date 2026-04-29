@@ -478,24 +478,38 @@ function initContactForm() {
 }
 
 // ========================================
-// HEADER SCROLL EFFECT
+// HEADER SCROLL EFFECT - auto-hide on scroll down, show on scroll up
 // ========================================
 function initHeaderScroll() {
     const header = document.querySelector('header');
     if (!header) return;
 
     let lastScroll = 0;
+    let ticking = false;
 
-    window.addEventListener('scroll', () => {
+    const update = () => {
         const currentScroll = window.pageYOffset;
+        const delta = currentScroll - lastScroll;
 
-        if (currentScroll > 100) {
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-        } else {
-            header.style.boxShadow = 'none';
+        // Box shadow apres 100px
+        header.classList.toggle('scrolled', currentScroll > 100);
+
+        // Auto-hide : scroll down > 150px et delta positif -> hide
+        if (currentScroll > 150 && delta > 4) {
+            header.classList.add('header-hidden');
+        } else if (delta < -4 || currentScroll < 100) {
+            header.classList.remove('header-hidden');
         }
 
         lastScroll = currentScroll;
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+        }
     });
 }
 
