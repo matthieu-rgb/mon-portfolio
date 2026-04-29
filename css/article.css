@@ -166,7 +166,7 @@ body canvas#particles-canvas {
    ARTICLE HERO - centre, signature editoriale magazine
    ============================================================ */
 .article-hero {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     text-align: center;
 }
 
@@ -298,10 +298,10 @@ body canvas#particles-canvas {
     font-family: var(--serif);
     font-variation-settings: "opsz" 144, "SOFT" 100;
     font-weight: 400;
-    font-size: 5.4rem;
+    font-size: 4.8rem;
     float: left;
-    line-height: 0.85;
-    margin: 0.4rem 0.7rem 0 -0.04em;
+    line-height: 1;
+    margin: 0.05em 0.12em -0.05em 0;
     color: var(--accent-warm);
 }
 
@@ -350,6 +350,13 @@ body canvas#particles-canvas {
     padding-top: 2rem;
     border-top: 1px solid var(--rule-warm);
     scroll-margin-top: 5rem;
+}
+
+/* Premier H2 : pas de separateur (le hero fait la rupture) */
+.article-prose > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
 }
 
 .article-prose h3 {
